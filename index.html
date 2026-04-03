@@ -3,49 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RulmanSatis | Teknik Çözümler</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>RulmanSatis | Endüstriyel Çözümler</title>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; color: #333; }
+        .hero { 
+            background: linear-gradient(rgba(0,31,63,0.8), rgba(0,31,63,0.8)), 
+                        url('https://images.unsplash.com/photo-1530138218440-adb815922713?q=80&w=2000');
+            background-size: cover; height: 450px; color: white;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .contact-section { padding: 40px 20px; background: #f9f9f9; }
+        .whatsapp-button { 
+            display: inline-block; background-color: #25d366; color: white; 
+            padding: 15px 30px; text-decoration: none; border-radius: 50px; 
+            font-weight: bold; font-size: 1.2rem; transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .whatsapp-button:hover { transform: scale(1.05); background-color: #128c7e; }
+        footer { padding: 20px; background: #001f3f; color: white; font-size: 0.8rem; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <header class="bg-black text-white py-6">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold tracking-tighter">RULMANSATIS<span class="text-blue-500">.COM</span></h1>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="#hakkimizda" class="hover:text-blue-400">Hakkımızda</a>
-                <a href="#blog" class="hover:text-blue-400">Blog</a>
-            </nav>
-        </div>
-    </header>
+<body>
 
-    <section class="bg-blue-600 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 italic">Hassasiyetle Dönün, Güvenle Büyüyün.</h2>
-            <p class="text-xl opacity-90 max-w-2xl mx-auto">Endüstriyel dünyada her şey mikronlarla ölçülür. Mühendislik vizyonumuzla en doğru rulman çözümlerini sunuyoruz.</p>
-        </div>
-    </section>
+    <div class="hero">
+        <h1>RULMANSATIŞ</h1>
+        <p>Mikron Hassasiyetinde Profesyonel Çözümler</p>
+    </div>
 
-    <section id="blog" class="py-16">
-        <div class="container mx-auto px-4">
-            <h3 class="text-3xl font-bold mb-10 border-b-2 border-blue-500 inline-block">Bilgilendirici Blog</h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                <article class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-bold mb-2 text-blue-600">Rulmanlarda Mikron Hassasiyeti Neden Önemlidir?</h4>
-                    <p class="text-gray-600 leading-relaxed">P5 ve P6 tolerans sınıfları, yüksek devirli makinelerde titreşimi minimize eder. Birkaç mikronluk sapma bile zamanla büyük arızalara yol açabilir...</p>
-                </article>
-                <article class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-bold mb-2 text-blue-600">Montaj Hataları ve Rulman Ömrü</h4>
-                    <p class="text-gray-600 leading-relaxed">Rulman arızalarının %90'ı yanlış montajdan kaynaklanır. Çekiçle vurmak yerine indüksiyon ısıtıcı kullanmak ömrü %50 uzatır.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+    <div class="contact-section">
+        <h2>Hızlı Teklif ve Teknik Destek</h2>
+        <p>Sorularınız için bize WhatsApp üzerinden anında ulaşabilirsiniz:</p>
+        
+        <a href="https://wa.me/905050913463?text=Merhaba, rulman çeşitleriniz hakkında bilgi alabilir miyim?" class="whatsapp-button">
+            ✅ WhatsApp ile Bağlan
+        </a>
+        
+        <p style="margin-top: 20px;">E-posta: <strong>info@rulmansatis.com</strong></p>
+    </div>
 
-    <footer class="bg-gray-900 text-gray-400 py-10 text-center">
-        <p>&copy; 2026 RulmanSatis.com | Endüstriyel Çözüm Ortağınız</p>
+    <footer>
+        &copy; 2026 RulmanSatis.com | Tüm Hakları Saklıdır.
     </footer>
+
 </body>
 </html>
-
