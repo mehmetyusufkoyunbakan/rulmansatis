@@ -3,85 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RulmanSatis | Endüstriyel Çözüm Ortağınız</title>
+    <title>Rulman Satış | Stoktan Hızlı Teslimat & Uygun Fiyatlar</title>
+    <meta name="description" content="Orijinal bilyalı, makaralı ve lineer rulman çeşitlerinde Türkiye'nin hızlı tedarik merkezi. En uygun fiyatlar için hemen WhatsApp'tan ulaşın.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        :root { --brand-blue: #004a99; --dark-grey: #333; --light-grey: #f4f4f4; --gold: #d4af37; }
-        body, html { margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; background: #fff; color: var(--dark-grey); }
-
-        /* Üst Bilgi Çubuğu */
-        .top-bar { background: var(--brand-blue); color: white; padding: 10px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; }
-
-        /* Hero / Tanıtım Alanı */
-        .hero { 
-            height: 70vh; 
-            background: linear-gradient(rgba(0, 74, 153, 0.7), rgba(0, 0, 0, 0.6)), 
-                        url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000');
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
-        }
-
-        .hero h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        .hero p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
-
-        /* Dil Seçimi ve Giriş Butonları (Saygılı Rulman Tarzı) */
-        .content-section { padding: 50px 10%; text-align: center; background: var(--light-grey); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: -100px; }
-
-        .lang-box {
-            background: white; padding: 40px; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: 0.3s; text-decoration: none; color: var(--dark-grey); border-top: 5px solid var(--brand-blue);
-        }
-        .lang-box:hover { transform: translateY(-10px); border-top-color: var(--gold); }
-        .lang-box h2 { color: var(--brand-blue); margin-top: 0; }
-        .lang-box p { font-size: 0.9rem; color: #666; line-height: 1.6; }
-
-        /* WhatsApp Sabit Buton */
-        .whatsapp { 
-            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; 
-            padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000;
-        }
+        :root { --blue: #004a99; --gold: #c5a021; --dark: #1a1a1a; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; color: var(--dark); }
         
-        footer { padding: 30px; background: #222; color: #777; font-size: 0.8rem; text-align: center; }
+        /* Navbar */
+        nav { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+
+        /* Hero */
+        .hero { height: 70vh; background: linear-gradient(rgba(0,40,80,0.8), rgba(0,20,40,0.6)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin: 0; }
+        .hero p { font-size: 1.1rem; margin: 20px 0; max-width: 700px; }
+        .btn-main { background: var(--blue); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+
+        /* WhatsApp */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 2000; }
     </style>
 </head>
 <body>
-
-    <div class="top-bar">
-        <span>📍 Mikron Hassasiyeti, Global Tedarik</span>
-        <span>📞 İletişim: +90 505 091 34 63</span>
-    </div>
-
-    <div class="hero">
-        <h1>RULMANSATIŞ</h1>
-        <p>Dünyanın Hareket Noktası</p>
-    </div>
-
-    <div class="content-section">
-        <div class="grid">
-            <a href="/tr/" class="lang-box">
-                <h2>TÜRKÇE 🇹🇷</h2>
-                <p>Geniş ürün yelpazesi, teknik kataloglar ve Türkiye geneli hızlı sevkiyat seçenekleri için giriş yapın.</p>
-                <strong style="color: var(--brand-blue);">İncele →</strong>
-            </a>
-            <a href="/en/" class="lang-box">
-                <h2>ENGLISH 🇬🇧</h2>
-                <p>Access our global inventory of high-precision bearings and international shipping solutions.</p>
-                <strong style="color: var(--brand-blue);">View More →</strong>
-            </a>
-            <a href="/ar/" class="lang-box">
-                <h2 style="direction: rtl;">العربية 🇸🇦</h2>
-                <p>اكتشف مجموعتنا الواسعة من المحامل الصناعية عالية الجودة وحلول التوريد العالمية.</p>
-                <strong style="color: var(--brand-blue);">دخول →</strong>
-            </a>
-        </div>
-    </div>
-
-    <footer style="margin-top: 50px;">
-        &copy; 2026 RulmanSatis.com | Tüm Hakları Saklıdır.
-    </footer>
-
-    <a href="https://wa.me/905050913463" class="whatsapp">Hızlı Teklif Al</a>
-
+    <nav>
+        <a href="/" class="logo">RULMAN SATIŞ</a>
+        <ul class="nav-links">
+            <li><a href="/">Anasayfa</a></li>
+            <li><a href="/tr/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="/tr/urunler.html">Ürünler</a></li>
+            <li><a href="/tr/katalog.html">Katalog</a></li>
+            <li><a href="/tr/blog.html">Blog</a></li>
+            <li><a href="/tr/iletisim.html">İletişim</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1>Geniş Stok, Hızlı Tedarik</h1>
+        <p>Endüstriyel rulman ihtiyaçlarınızda en kaliteli markaları, rekabetçi fiyatlarla sunuyoruz.</p>
+        <a href="/tr/urunler.html" class="btn-main">ÜRÜNLERİ GÖR</a>
+    </header>
+    <a href="https://wa.me/905050913463" class="wa-float">HIZLI TEDARİK İÇİN TIKLAYIN</a>
 </body>
 </html>
