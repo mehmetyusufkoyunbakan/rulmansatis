@@ -1,4 +1,8 @@
 baseURL = 'https://rulmansatis.com/'
 languageCode = 'tr-tr'
-title = 'RulmanSatis | Teknik Rulman Çözümleri'
+title = 'RulmanSatis | Teknik Çözümler'
 theme = 'ananke'
+
+[module]
+  [[module.imports]]
+    path = "github.com/theNewDynamic/gohugo-theme-ananke"
