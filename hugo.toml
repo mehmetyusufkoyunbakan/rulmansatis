@@ -6,7 +6,3 @@ theme = 'ananke'
 [module]
   [[module.imports]]
     path = "github.com/theNewDynamic/gohugo-theme-ananke"
-    
-[module]
-  [[module.imports]]
-    path = "github.com/theNewDynamic/gohugo-theme-ananke"
