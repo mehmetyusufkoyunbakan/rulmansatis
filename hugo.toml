@@ -1,0 +1,4 @@
+baseURL = 'https://rulmansatis.com/'
+languageCode = 'tr-tr'
+title = 'RulmanSatis | Teknik Rulman Çözümleri'
+theme = 'ananke'
