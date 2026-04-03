@@ -1,3 +1,4 @@
+
 name: Deploy Hugo site to Pages
 
 on:
@@ -35,13 +36,15 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Install Theme Manually
+        run: |
+          mkdir -p themes/ananke
+          curl -L https://github.com/theNewDynamic/gohugo-theme-ananke/archive/master.tar.gz | tar -xz -C themes/ananke --strip-components=1
       - name: Build with Hugo
         run: |
           hugo \
             --gc \
             --minify \
-            --theme ananke \
-            --themesDir themes \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -58,4 +61,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
