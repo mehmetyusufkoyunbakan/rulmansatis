@@ -3,48 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RulmanSatis | Endüstriyel Çözümler</title>
+    <title>RulmanSatis | Endüstriyel Çözüm Ortağınız</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; color: #333; }
+        :root { --brand-blue: #004a99; --dark-grey: #333; --light-grey: #f4f4f4; --gold: #d4af37; }
+        body, html { margin: 0; padding: 0; font-family: 'Roboto', Arial, sans-serif; background: #fff; color: var(--dark-grey); }
+
+        /* Üst Bilgi Çubuğu */
+        .top-bar { background: var(--brand-blue); color: white; padding: 10px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; }
+
+        /* Hero / Tanıtım Alanı */
         .hero { 
-            background: linear-gradient(rgba(0,31,63,0.8), rgba(0,31,63,0.8)), 
-                        url('https://images.unsplash.com/photo-1530138218440-adb815922713?q=80&w=2000');
-            background-size: cover; height: 450px; color: white;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 70vh; 
+            background: linear-gradient(rgba(0, 74, 153, 0.7), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center;
         }
-        .contact-section { padding: 40px 20px; background: #f9f9f9; }
-        .whatsapp-button { 
-            display: inline-block; background-color: #25d366; color: white; 
-            padding: 15px 30px; text-decoration: none; border-radius: 50px; 
-            font-weight: bold; font-size: 1.2rem; transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+
+        .hero h1 { font-size: 3rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
+
+        /* Dil Seçimi ve Giriş Butonları (Saygılı Rulman Tarzı) */
+        .content-section { padding: 50px 10%; text-align: center; background: var(--light-grey); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: -100px; }
+
+        .lang-box {
+            background: white; padding: 40px; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: 0.3s; text-decoration: none; color: var(--dark-grey); border-top: 5px solid var(--brand-blue);
         }
-        .whatsapp-button:hover { transform: scale(1.05); background-color: #128c7e; }
-        footer { padding: 20px; background: #001f3f; color: white; font-size: 0.8rem; }
+        .lang-box:hover { transform: translateY(-10px); border-top-color: var(--gold); }
+        .lang-box h2 { color: var(--brand-blue); margin-top: 0; }
+        .lang-box p { font-size: 0.9rem; color: #666; line-height: 1.6; }
+
+        /* WhatsApp Sabit Buton */
+        .whatsapp { 
+            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; 
+            padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000;
+        }
+        
+        footer { padding: 30px; background: #222; color: #777; font-size: 0.8rem; text-align: center; }
     </style>
 </head>
 <body>
 
+    <div class="top-bar">
+        <span>📍 Mikron Hassasiyeti, Global Tedarik</span>
+        <span>📞 İletişim: +90 505 091 34 63</span>
+    </div>
+
     <div class="hero">
         <h1>RULMANSATIŞ</h1>
-        <p>Mikron Hassasiyetinde Profesyonel Çözümler</p>
+        <p>Dünyanın Hareket Noktası</p>
     </div>
 
-    <div class="contact-section">
-        <h2>Hızlı Teklif ve Teknik Destek</h2>
-        <p>Sorularınız için bize WhatsApp üzerinden anında ulaşabilirsiniz:</p>
-        
-        <a href="https://wa.me/905050913463?text=Merhaba, rulman çeşitleriniz hakkında bilgi alabilir miyim?" class="whatsapp-button">
-            ✅ WhatsApp ile Bağlan
-        </a>
-        
-        <p style="margin-top: 20px;">E-posta: <strong>info@rulmansatis.com</strong></p>
+    <div class="content-section">
+        <div class="grid">
+            <a href="/tr/" class="lang-box">
+                <h2>TÜRKÇE 🇹🇷</h2>
+                <p>Geniş ürün yelpazesi, teknik kataloglar ve Türkiye geneli hızlı sevkiyat seçenekleri için giriş yapın.</p>
+                <strong style="color: var(--brand-blue);">İncele →</strong>
+            </a>
+            <a href="/en/" class="lang-box">
+                <h2>ENGLISH 🇬🇧</h2>
+                <p>Access our global inventory of high-precision bearings and international shipping solutions.</p>
+                <strong style="color: var(--brand-blue);">View More →</strong>
+            </a>
+            <a href="/ar/" class="lang-box">
+                <h2 style="direction: rtl;">العربية 🇸🇦</h2>
+                <p>اكتشف مجموعتنا الواسعة من المحامل الصناعية عالية الجودة وحلول التوريد العالمية.</p>
+                <strong style="color: var(--brand-blue);">دخول →</strong>
+            </a>
+        </div>
     </div>
 
-    <footer>
+    <footer style="margin-top: 50px;">
         &copy; 2026 RulmanSatis.com | Tüm Hakları Saklıdır.
     </footer>
 
+    <a href="https://wa.me/905050913463" class="whatsapp">Hızlı Teklif Al</a>
+
 </body>
 </html>
-
