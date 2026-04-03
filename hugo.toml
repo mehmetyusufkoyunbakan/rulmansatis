@@ -1,7 +1,0 @@
-baseURL = 'https://rulmansatis.com/'
-languageCode = 'tr-tr'
-title = 'RulmanSatis | Teknik Rulman Çözümleri'
-theme = 'ananke'
-
-[params]
-  description = "Mikron hassasiyetinde rulman çözümleri ve endüstriyel danışmanlık."
