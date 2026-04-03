@@ -3,46 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rulman Satış | Stoktan Hızlı Teslimat & Uygun Fiyatlar</title>
-    <meta name="description" content="Orijinal bilyalı, makaralı ve lineer rulman çeşitlerinde Türkiye'nin hızlı tedarik merkezi. En uygun fiyatlar için hemen WhatsApp'tan ulaşın.">
+    <title>Rulman Satış | Stoktan Hızlı Tedarik & Orijinal Ürünler</title>
+    <meta name="description" content="Endüstriyel rulman ihtiyaçlarınızda stoktan teslim, uygun fiyat ve hızlı tedarik. Bilyalı, makaralı ve lineer rulman çeşitleri.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        :root { --blue: #004a99; --gold: #c5a021; --dark: #1a1a1a; }
-        body { margin: 0; font-family: 'Poppins', sans-serif; color: var(--dark); }
+        :root { --blue: #004a99; --dark: #1a1a1a; --gray: #f4f4f4; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; color: var(--dark); background: #fff; }
         
-        /* Navbar */
+        /* Navigasyon */
         nav { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .logo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
         .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
 
-        /* Hero */
-        .hero { height: 70vh; background: linear-gradient(rgba(0,40,80,0.8), rgba(0,20,40,0.6)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin: 0; }
-        .hero p { font-size: 1.1rem; margin: 20px 0; max-width: 700px; }
-        .btn-main { background: var(--blue); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+        /* Hero Bölümü */
+        .hero { height: 75vh; background: linear-gradient(rgba(0,40,80,0.8), rgba(0,20,40,0.6)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); margin: 0; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; margin: 25px 0; max-width: 800px; opacity: 0.9; }
+        .btn-main { background: var(--blue); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-main:hover { background: #00356e; }
 
-        /* WhatsApp */
+        /* WhatsApp Butonu */
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 2000; }
+        
+        footer { background: #111; color: #777; padding: 40px; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/" class="logo">RULMAN SATIŞ</a>
-        <ul class="nav-links">
-            <li><a href="/">Anasayfa</a></li>
-            <li><a href="/tr/hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="/tr/urunler.html">Ürünler</a></li>
-            <li><a href="/tr/katalog.html">Katalog</a></li>
-            <li><a href="/tr/blog.html">Blog</a></li>
-            <li><a href="/tr/iletisim.html">İletişim</a></li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <h1>Geniş Stok, Hızlı Tedarik</h1>
-        <p>Endüstriyel rulman ihtiyaçlarınızda en kaliteli markaları, rekabetçi fiyatlarla sunuyoruz.</p>
-        <a href="/tr/urunler.html" class="btn-main">ÜRÜNLERİ GÖR</a>
-    </header>
-    <a href="https://wa.me/905050913463" class="wa-float">HIZLI TEDARİK İÇİN TIKLAYIN</a>
+
+<nav>
+    <a href="/" class="logo">RULMAN SATIŞ</a>
+    <ul class="nav-links">
+        <li><a href="/">Anasayfa</a></li>
+        <li><a href="/tr/hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="/tr/urunler.html">Ürünler</a></li>
+        <li><a href="/tr/katalog.html">Katalog</a></li>
+        <li><a href="/tr/blog.html">Blog</a></li>
+        <li><a href="/tr/iletisim.html">İletişim</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Hızlı Tedarik, Güçlü Stok <br> Profesyonel Rulman Çözümleri</h1>
+    <p>Sanayi üretiminizin aksamaması için ihtiyacınız olan tüm rulman çeşitlerini en kısa sürede adresinize ulaştırıyoruz.</p>
+    <a href="/tr/urunler.html" class="btn-main">ÜRÜNLERİ İNCELE</a>
+</section>
+
+<footer>
+    &copy; 2026 RulmanSatis.com | Hızlı Tedarik Hattı: +90 505 091 34 63
+</footer>
+
+<a href="https://wa.me/905050913463" class="wa-float">HIZLI TEDARİK İÇİN TIKLAYIN</a>
+
 </body>
 </html>
