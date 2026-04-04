@@ -5,8 +5,19 @@
     <title>Rulman Satış | Geleceğin Teknolojisi</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hızlı İletişim Barı */
+        .top-bar { background: var(--dark); color: white; padding: 10px 5%; font-size: 0.8rem; display: flex; justify-content: flex-end; gap: 20px; }
+        .top-bar a { color: var(--neon); text-decoration: none; font-weight: 600; }
+        .call-btn { background: var(--neon); color: var(--dark) !important; padding: 5px 15px; border-radius: 20px; }
+    </style>
 </head>
 <body>
+    <div class="top-bar">
+        <span>Teknik Destek:</span>
+        <a href="tel:+905050913463" class="call-btn">📞 Hemen Ara: 0505 091 34 63</a>
+    </div>
+
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo">RULMAN SATIŞ</a>
@@ -14,7 +25,6 @@
                 <li><a href="index.html">Anasayfa</a></li>
                 <li><a href="tr/hakkimizda.html">Hakkımızda</a></li>
                 <li><a href="tr/urunler.html">Ürünler</a></li>
-                <li><a href="tr/katalog.html">Katalog</a></li>
                 <li><a href="tr/blog.html">Blog</a></li>
                 <li><a href="tr/iletisim.html">İletişim</a></li>
             </ul>
@@ -23,24 +33,12 @@
 
     <section class="hero" style="background-image: linear-gradient(rgba(15,23,42,0.5), rgba(15,23,42,0.5)), url('1000500012.jpg');">
         <h1>HASSASİYETİN <br> DİJİTAL YÜZÜ</h1>
-        <p>Endüstri 4.0 uyumlu, mikron hassasiyetinde mühendislik çözümleri sunuyoruz.</p>
+        <p>Endüstri 4.0 uyumlu mühendislik çözümleri.</p>
+        <a href="https://wa.me/905050913463" style="background:var(--neon); color:var(--dark); padding:15px 30px; text-decoration:none; border-radius:30px; font-weight:bold; margin-top:20px;">WHATSAPP'TAN TEKLİF AL</a>
     </section>
 
-    <section class="grid">
-        <div class="card">
-            <img src="1000500015.jpg">
-            <div class="card-overlay"><h3>Sistem Entegrasyonu</h3><p>Mühendislik disipliniyle kusursuz uyum.</p></div>
-        </div>
-        <div class="card">
-            <img src="1000500014.jpg">
-            <div class="card-overlay"><h3>Güç Aktarımı</h3><p>Dayanıklı dişli ve rulman setleri.</p></div>
-        </div>
-        <div class="card">
-            <img src="1000500011.jpg">
-            <div class="card-overlay"><h3>Teknik Analiz</h3><p>Kalite kontrol ve mikron ölçüm desteği.</p></div>
-        </div>
-    </section>
-
-    <a href="https://wa.me/905050913463" class="wa-float" target="_blank">📱</a>
+    <a href="https://wa.me/905050913463" class="wa-float" target="_blank" style="position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9999; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:35px;">
+    </a>
 </body>
 </html>
