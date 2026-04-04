@@ -2,67 +2,11 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Rulman Satış - Teknik Makaleler</title>
+    <title>Blog | Rulman Satış</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        .blog-header { padding: 140px 5% 60px; text-align: center; background: var(--light); }
-        .blog-header h1 { font-family: 'Montserrat'; font-size: 2.5rem; color: var(--blue); margin-bottom: 10px; }
-        
-        .blog-wrapper { max-width: 1200px; margin: 0 auto; padding: 40px 5% 100px; }
-        
-        /* Kemik Grid Yapısı */
-        .blog-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
-            gap: 40px; 
-        }
-
-        /* Haber Kartı Modülü */
-        .post-card {
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .post-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-color: var(--neon);
-        }
-
-        .post-thumb { width: 100%; height: 230px; object-fit: cover; }
-        
-        .post-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        .post-date { font-size: 0.8rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; display: block; }
-        .post-info h2 { font-family: 'Montserrat'; font-size: 1.35rem; margin: 0 0 15px 0; line-height: 1.3; color: var(--dark); }
-        .post-info p { font-size: 0.95rem; color: #64748b; margin-bottom: 20px; line-height: 1.6; }
-        
-        .post-link { 
-            margin-top: auto; 
-            font-weight: 600; 
-            font-size: 0.9rem; 
-            color: var(--dark); 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-        }
-        .post-link::after { content: '→'; transition: 0.2s; color: var(--neon); font-size: 1.2rem; }
-        .post-card:hover .post-link::after { transform: translateX(5px); }
-
-        @media (max-width: 480px) { .blog-grid { grid-template-columns: 1fr; } }
-    </style>
+    <link rel="stylesheet" href="../style.css"> 
 </head>
 <body>
-
     <header>
         <div class="nav-container">
             <a href="../index.html" class="logo">RULMAN SATIŞ</a>
@@ -76,47 +20,19 @@
         </div>
     </header>
 
-    <div class="blog-header">
+    <div class="blog-header" style="padding-top:150px; text-align:center;">
         <h1>Teknik Makaleler</h1>
-        <p>Mühendislik analizleri, sektörel haberler ve bakım kılavuzları.</p>
     </div>
 
-    <main class="blog-wrapper">
-        <div class="blog-grid">
-
-            <a href="blog/rulman-bakimi.html" class="post-card">
-                <img src="../1000500016.jpg" alt="Rulman Bakımı" class="post-thumb">
-                <div class="post-info">
-                    <span class="post-date">04 NİSAN 2026</span>
-                    <h2>Zorlu Koşullarda Rulman Ömrü ve Mikron Hassasiyeti</h2>
-                    <p>Tozlu ve nemli ortamlarda çalışan rulmanların ömrünü uzatmak için stratejik mühendislik yaklaşımları.</p>
-                    <span class="post-link">Yazıyı İncele</span>
-                </div>
-            </a>
-            <a href="blog/endustri-4-0.html" class="post-card">
-                <img src="../1000500012.jpg" alt="Endüstri 4.0" class="post-thumb">
-                <div class="post-info">
-                    <span class="post-date">02 NİSAN 2026</span>
-                    <h2>Endüstri 4.0 ve Akıllı Rulman Sistemleri</h2>
-                    <p>Veri analitiğinin güç aktarım organlarındaki devrimsel etkisi ve kestirimci bakımın önemi.</p>
-                    <span class="post-link">Yazıyı İncele</span>
-                </div>
-            </a>
-
-            <a href="blog/hassas-tolerans.html" class="post-card">
-                <img src="../1000500011.jpg" alt="Hassas Tolerans" class="post-thumb">
-                <div class="post-info">
-                    <span class="post-date">30 MART 2026</span>
-                    <h2>Hassas Toleransların Operasyonel Verimliliğe Etkisi</h2>
-                    <p>Mikron düzeyindeki sapmaların enerji tasarrufu ve uzun vadeli maliyetler üzerindeki etkisi.</p>
-                    <span class="post-link">Yazıyı İncele</span>
-                </div>
-            </a>
-
-        </div>
+    <main class="blog-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px; padding:50px;">
+        <a href="blog/rulman-bakimi.html" class="card" style="text-decoration:none;">
+            <img src="../1000500016.jpg" style="width:100%; height:200px; object-fit:cover;">
+            <div style="padding:15px;">
+                <h2 style="font-size:1.2rem; color:var(--dark);">Zorlu Koşullarda Rulman Bakımı</h2>
+                <p style="font-size:0.9rem; color:#666;">Mikron düzeyinde analiz ve koruma yöntemleri...</p>
+                <span style="color:var(--blue); font-weight:bold;">Devamını Oku →</span>
+            </div>
+        </a>
     </main>
-
-    <a href="https://wa.me/905050913463" class="wa-float" target="_blank">📱</a>
-
 </body>
 </html>
