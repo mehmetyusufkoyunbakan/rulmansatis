@@ -2,64 +2,121 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Zorlu Koşullarda Rulman Bakımı | Rulman Satış</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Rulman Satış - Teknik Makaleler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
     <style>
-        .post-container { max-width: 900px; margin: 120px auto 80px; padding: 0 5%; }
-        .post-header img { width: 100%; height: 450px; object-fit: cover; border-radius: 30px; margin-bottom: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .meta { color: var(--blue); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-        .post-content h1 { font-family: 'Montserrat'; font-size: 2.5rem; margin: 10px 0 30px; line-height: 1.2; color: var(--dark); }
-        .post-content h2 { font-family: 'Montserrat'; color: var(--blue); margin-top: 40px; }
-        .post-content p { font-size: 1.1rem; color: #444; margin-bottom: 20px; text-align: justify; }
-        .highlight-box { background: var(--light); border-left: 5px solid var(--neon); padding: 30px; margin: 40px 0; border-radius: 0 15px 15px 0; font-style: italic; }
-        .back-link { display: inline-block; margin-top: 50px; text-decoration: none; color: var(--dark); font-weight: 600; border-bottom: 2px solid var(--neon); }
+        .blog-header { padding: 140px 5% 60px; text-align: center; background: var(--light); }
+        .blog-header h1 { font-family: 'Montserrat'; font-size: 2.5rem; color: var(--blue); margin-bottom: 10px; }
+        
+        .blog-wrapper { max-width: 1200px; margin: 0 auto; padding: 40px 5% 100px; }
+        
+        /* Kemik Grid Yapısı */
+        .blog-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 40px; 
+        }
+
+        /* Haber Kartı Modülü */
+        .post-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--neon);
+        }
+
+        .post-thumb { width: 100%; height: 230px; object-fit: cover; }
+        
+        .post-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .post-date { font-size: 0.8rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; display: block; }
+        .post-info h2 { font-family: 'Montserrat'; font-size: 1.35rem; margin: 0 0 15px 0; line-height: 1.3; color: var(--dark); }
+        .post-info p { font-size: 0.95rem; color: #64748b; margin-bottom: 20px; line-height: 1.6; }
+        
+        .post-link { 
+            margin-top: auto; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            color: var(--dark); 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+        .post-link::after { content: '→'; transition: 0.2s; color: var(--neon); font-size: 1.2rem; }
+        .post-card:hover .post-link::after { transform: translateX(5px); }
+
+        @media (max-width: 480px) { .blog-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
-            <a href="../../index.html" class="logo">RULMAN SATIŞ</a>
+            <a href="../index.html" class="logo">RULMAN SATIŞ</a>
             <ul class="nav-menu">
-                <li><a href="../../index.html">Anasayfa</a></li>
-                <li><a href="../hakkimizda.html">Hakkımızda</a></li>
-                <li><a href="../urunler.html">Ürünler</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../iletisim.html">İletişim</a></li>
+                <li><a href="../index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="urunler.html">Ürünler</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
             </ul>
         </div>
     </header>
 
-    <article class="post-container">
-        <div class="post-header">
-            <span class="meta">Teknik Analiz / 04 Nisan 2026</span>
-            <img src="../../1000500016.jpg" alt="Rulman Bakımı">
+    <div class="blog-header">
+        <h1>Teknik Makaleler</h1>
+        <p>Mühendislik analizleri, sektörel haberler ve bakım kılavuzları.</p>
+    </div>
+
+    <main class="blog-wrapper">
+        <div class="blog-grid">
+
+            <a href="blog/rulman-bakimi.html" class="post-card">
+                <img src="../1000500016.jpg" alt="Rulman Bakımı" class="post-thumb">
+                <div class="post-info">
+                    <span class="post-date">04 NİSAN 2026</span>
+                    <h2>Zorlu Koşullarda Rulman Ömrü ve Mikron Hassasiyeti</h2>
+                    <p>Tozlu ve nemli ortamlarda çalışan rulmanların ömrünü uzatmak için stratejik mühendislik yaklaşımları.</p>
+                    <span class="post-link">Yazıyı İncele</span>
+                </div>
+            </a>
+            <a href="blog/endustri-4-0.html" class="post-card">
+                <img src="../1000500012.jpg" alt="Endüstri 4.0" class="post-thumb">
+                <div class="post-info">
+                    <span class="post-date">02 NİSAN 2026</span>
+                    <h2>Endüstri 4.0 ve Akıllı Rulman Sistemleri</h2>
+                    <p>Veri analitiğinin güç aktarım organlarındaki devrimsel etkisi ve kestirimci bakımın önemi.</p>
+                    <span class="post-link">Yazıyı İncele</span>
+                </div>
+            </a>
+
+            <a href="blog/hassas-tolerans.html" class="post-card">
+                <img src="../1000500011.jpg" alt="Hassas Tolerans" class="post-thumb">
+                <div class="post-info">
+                    <span class="post-date">30 MART 2026</span>
+                    <h2>Hassas Toleransların Operasyonel Verimliliğe Etkisi</h2>
+                    <p>Mikron düzeyindeki sapmaların enerji tasarrufu ve uzun vadeli maliyetler üzerindeki etkisi.</p>
+                    <span class="post-link">Yazıyı İncele</span>
+                </div>
+            </a>
+
         </div>
-
-        <div class="post-content">
-            <h1>Zorlu Koşullarda Rulman Ömrü ve Mikron Hassasiyeti</h1>
-            
-            <p>Endüstriyel sistemlerin kesintisiz çalışması, sistemin en küçük ama en kritik parçası olan rulmanların sağlığına bağlıdır. Özellikle toz, yüksek nem ve değişken ısı maruziyeti olan sahalarda, rulman bakımı sadece bir rutin değil, bir mühendislik zorunluluğudur.</p>
-
-            <h2>1. Kontaminasyon Kontrolü: Mikron Düzeyinde Koruma</h2>
-            <p>Rulman arızalarının %50'den fazlası dış kaynaklı kirleticilerden kaynaklanır. Toz partikülleri, rulman yatağına sızdığında bilye ve bilezik yüzeylerinde mikron düzeyinde çizikler oluşturur. Bu aşınmalar zamanla vibrasyona ve sistemin tolerans değerlerinden sapmasına yol açar. Çözüm olarak, çalışma ortamına uygun sızdırmazlık (keçe) elemanlarının seçimi ilk önceliktir.</p>
-
-            <div class="highlight-box">
-                "Bir rulmanın ömrünü belirleyen en büyük faktör, montaj anındaki temizlik ve doğru tolerans aralığıdır. Mikron düzeyindeki bir hata, makro düzeyde duruş maliyetine yol açar."
-            </div>
-
-            <h2>2. Yağlama Stratejisi ve Viskozite Seçimi</h2>
-            <p>Doğru yağlama, metal-metal temasını engelleyen mikroskobik bir film tabakası oluşturur. Yüksek sıcaklıklarda yağın viskozitesinin düşmesi, bu koruyucu tabakanın incelmesine neden olur. Kestirimci bakım süreçlerinde, yağ analizleri yapılarak içindeki metal partikül yoğunluğu takip edilmeli ve sistem henüz arıza vermeden müdahale edilmelidir.</p>
-
-            <h2>3. Montajda Mühendislik Disiplini</h2>
-            <p>Rulmanların yanlış montajı (aşırı sıkma veya eksenel kaçıklıklar), iç gerilmeleri artırarak metal yorulmasını hızlandırır. Hassas tork anahtarları ve indüksiyonlu ısıtma cihazları kullanarak yapılan montajlar, parçanın teorik ömrüne ulaşmasını sağlar.</p>
-
-            <p>Sonuç olarak; rulman bakımı bir maliyet kalemi değil, üretimin sürekliliğini garanti altına alan bir yatırımdır. Rulman Satış olarak, mikron hassasiyetindeki teknik desteğimizle her zaman yanınızdayız.</p>
-        </div>
-
-        <a href="../blog.html" class="back-link">← Blog Listesine Dön</a>
-    </article>
+    </main>
 
     <a href="https://wa.me/905050913463" class="wa-float" target="_blank">📱</a>
+
 </body>
 </html>
