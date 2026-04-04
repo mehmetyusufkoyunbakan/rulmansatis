@@ -7,20 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* TEMEL AYARLAR */
+        /* TÜM TASARIM AYARLARI */
         :root {
             --blue: #004a99;
             --dark: #0f172a;
             --neon: #39FF14;
             --light: #f8fafc;
         }
-        body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; overflow-x: hidden; }
+        
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; color: var(--dark); }
 
-        /* ÜST BİLGİ BARI (Siyah Bar) */
+        /* 1. ÜST SİYAH BAR */
         .top-bar {
             background: var(--dark);
             color: white;
-            padding: 12px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -30,10 +32,10 @@
         }
         .top-bar a { color: var(--neon); text-decoration: none; font-weight: bold; }
 
-        /* NAVİGASYON (Beyaz Bar) */
+        /* 2. BEYAZ NAVİGASYON BARI */
         header {
             background: white;
-            padding: 20px 5%;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -43,13 +45,17 @@
             z-index: 1000;
         }
         .logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
-        .nav-menu { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
-        .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; }
+        
+        .nav-menu { display: flex; list-style: none; gap: 20px; margin: 0; padding: 0; }
+        .nav-menu a { 
+            text-decoration: none; color: var(--dark); font-weight: 600; 
+            text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; 
+        }
         .nav-menu a:hover { color: var(--blue); }
 
-        /* HERO ALANI */
+        /* 3. HERO (GİRİŞ) ALANI */
         .hero {
-            height: 70vh;
+            height: 75vh;
             background: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), url('1000500012.jpg') center/cover;
             display: flex;
             flex-direction: column;
@@ -59,38 +65,52 @@
             color: white;
             padding: 0 5%;
         }
-        .hero h1 { font-family: 'Montserrat'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; line-height: 1.1; }
-        .hero p { font-size: 1.2rem; margin: 20px 0 30px; max-width: 700px; opacity: 0.9; }
-        .hero-btns { display: flex; gap: 15px; }
+        .hero h1 { font-family: 'Montserrat'; font-size: clamp(2.2rem, 5vw, 4rem); margin: 0; line-height: 1.1; }
+        .hero p { font-size: 1.1rem; margin: 20px 0 30px; max-width: 600px; opacity: 0.9; }
+        
+        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
         .btn { padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
         .btn-primary { background: var(--blue); color: white; }
         .btn-secondary { background: var(--neon); color: var(--dark); }
 
-        /* KARTLAR (Grid) */
-        .grid-section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { border-radius: 20px; overflow: hidden; position: relative; height: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); cursor: pointer; }
+        /* 4. ÜRÜN/VİZYON KARTLARI */
+        .grid-section { 
+            padding: 60px 5%; max-width: 1200px; margin: 0 auto; 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; 
+        }
+        .card { 
+            border-radius: 20px; overflow: hidden; position: relative; height: 350px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-decoration: none; color: white;
+        }
         .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
         .card:hover img { transform: scale(1.1); }
-        .card-overlay { position: absolute; bottom: 0; width: 100%; padding: 30px; background: linear-gradient(transparent, rgba(15,23,42,0.95)); color: white; box-sizing: border-box; }
+        .card-content { 
+            position: absolute; bottom: 0; padding: 25px; 
+            background: linear-gradient(transparent, rgba(15,23,42,0.9)); width: 100%; 
+        }
 
-        /* SABİT İLETİŞİM BUTONLARI (Sağ Alt) */
-        .sticky-contacts { position: fixed; bottom: 30px; right: 25px; display: flex; flex-direction: column; gap: 15px; z-index: 2000; }
-        .sticky-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: 0.3s; text-decoration: none; }
-        .sticky-btn:hover { transform: scale(1.1); }
-        .wa-btn { background: #25d366; }
-        .call-btn { background: var(--blue); }
-        .sticky-btn img { width: 30px; filter: brightness(0) invert(1); }
+        /* 5. SABİT İLETİŞİM BUTONLARI */
+        .sticky-box { position: fixed; bottom: 25px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 2000; }
+        .s-btn { 
+            width: 55px; height: 55px; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+            transition: 0.3s; text-decoration: none; 
+        }
+        .s-btn:hover { transform: scale(1.1); }
+        .s-wa { background: #25d366; }
+        .s-call { background: var(--blue); }
+        .s-btn img { width: 25px; filter: brightness(0) invert(1); }
 
         @media (max-width: 768px) {
-            .nav-menu { display: none; } /* Mobil için burger menü gerekebilir, şimdilik temizlik için gizli */
-            .top-bar { flex-direction: column; text-align: center; gap: 5px; }
+            .nav-menu { display: none; } /* Mobil menü için sadece önemli linkler veya burger eklenebilir */
+            .top-bar { font-size: 0.75rem; flex-direction: column; gap: 5px; }
         }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <span>Hassas Rulman Çözümleri</span>
+        <span>Mühendislik Vizyonuyla Rulman Tedariği</span>
         <a href="tel:+905050913463">📞 0505 091 34 63</a>
     </div>
 
@@ -108,13 +128,41 @@
     </header>
 
     <section class="hero">
-        <h1>HASSASİYETİN <br> DİJİTAL YÜZÜ</h1>
-        <p>Endüstri mühendisliği disipliniyle mikron düzeyinde operasyonel mükemmellik.</p>
+        <h1>HASSASİYETİN <br> GELECEĞİ</h1>
+        <p>Endüstri 4.0 uyumlu, yüksek dayanımlı ve mikron hassasiyetinde rulman çözümleri sunuyoruz.</p>
         <div class="hero-btns">
-            <a href="tr/urunler.html" class="btn btn-primary">ÜRÜNLER</a>
-            <a href="https://wa.me/905050913463" class="btn btn-secondary">TEKLİF AL</a>
+            <a href="tr/urunler.html" class="btn btn-primary">ÜRÜNLERİMİZ</a>
+            <a href="https://wa.me/905050913463" class="btn btn-secondary">WHATSAPP TEKLİF</a>
         </div>
     </section>
 
     <section class="grid-section">
-        <a href="tr/hakkimizda.html" class="card
+        <a href="tr/hakkimizda.html" class="card">
+            <img src="1000500015.jpg">
+            <div class="card-content"><h3>Kurumsal</h3><p>Mühendislik temelli ticaret anlayışımız.</p></div>
+        </a>
+        <a href="tr/urunler.html" class="card">
+            <img src="1000500014.jpg">
+            <div class="card-content"><h3>Ürün Grupları</h3><p>Geniş stok ve teknik destek.</p></div>
+        </a>
+        <a href="tr/blog.html" class="card">
+            <img src="1000500011.jpg">
+            <div class="card-content"><h3>Teknik Blog</h3><p>Bakım rehberleri ve analizler.</p></div>
+        </a>
+    </section>
+
+    <div class="sticky-box">
+        <a href="tel:+905050913463" class="s-btn s-call" title="Hemen Ara">
+            <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png">
+        </a>
+        <a href="https://wa.me/905050913463" class="s-btn s-wa" target="_blank" title="WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+        </a>
+    </div>
+
+    <footer style="background:#0f172a; color:white; padding:40px 5%; text-align:center; font-size:0.9rem;">
+        <p>&copy; 2026 Rulman Satış | Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
