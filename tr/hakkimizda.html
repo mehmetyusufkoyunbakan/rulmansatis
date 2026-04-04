@@ -2,36 +2,42 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımızda | Rulman Satış</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #004a99; --dark: #0f172a; --neon: #39FF14; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; }
+        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 20px; }
+        .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+        .content { padding: 100px 5%; max-width: 1200px; margin: 0 auto; display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
+        .content img { flex: 1; min-width: 300px; border-radius: 20px; width: 100%; }
+        .text { flex: 1; min-width: 300px; }
+        h1 { font-family: 'Montserrat'; color: var(--blue); font-size: 2.5rem; }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    </style>
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <a href="../index.html" class="logo">RULMAN SATIŞ</a>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Anasayfa</a></li>
-                <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                <li><a href="urunler.html">Ürünler</a></li>
-                <li><a href="katalog.html">Katalog</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
-            </ul>
-        </div>
+        <a href="../index.html" class="logo">RULMAN SATIŞ</a>
+        <nav><ul class="nav-menu">
+            <li><a href="../index.html">Anasayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="urunler.html">Ürünler</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul></nav>
     </header>
-
-    <section class="hero" style="height: 40vh; background-image: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('../1000500015.jpg');">
-        <h1>VİZYONUMUZ</h1>
-    </section>
-
-    <section style="padding: 80px 10%; max-width: 1200px; margin: 0 auto; display: flex; gap: 60px; align-items: center; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 300px;"><img src="../1000500015.jpg" style="width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);"></div>
-        <div style="flex: 1; min-width: 300px;">
-            <h2 style="color: var(--blue); font-family: 'Montserrat'; font-size: 2rem;">Mühendislikten Ticarete</h2>
-            <p>Rulman Satış, bir Endüstri Mühendisi vizyonuyla kurulan, operasyonel mükemmelliği ve teknik veriyi temel alan bir dijital ticaret platformudur.</p>
-            <p>Sadece ürün satmıyoruz; sanayinin kalbi olan rulman sistemlerinde mikron düzeyinde hassasiyet ve stratejik tedarik çözümleri üretiyoruz.</p>
+    <div class="content">
+        <img src="../1000500015.jpg">
+        <div class="text">
+            <h1>Mühendislik Vizyonu</h1>
+            <p>Rulman Satış, bir Endüstri Mühendisi girişimi olarak operasyonel mükemmelliği ve teknik hassasiyeti ticaretin merkezine koyar.</p>
+            <p>Amacımız, sanayinin kalbi olan rulman sistemlerinde dijitalleşme ve hızı birleştirerek en doğru çözümleri sunmaktır.</p>
         </div>
-    </section>
+    </div>
+    <a href="https://wa.me/905050913463" class="wa-float" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30"></a>
 </body>
 </html>
