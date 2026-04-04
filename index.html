@@ -1,21 +1,54 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Rulman Satış | Geleceğin Teknolojisi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rulman Satış | Endüstriyel Çözümler & Mühendislik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* Hızlı İletişim Barı */
-        .top-bar { background: var(--dark); color: white; padding: 10px 5%; font-size: 0.8rem; display: flex; justify-content: flex-end; gap: 20px; }
-        .top-bar a { color: var(--neon); text-decoration: none; font-weight: 600; }
-        .call-btn { background: var(--neon); color: var(--dark) !important; padding: 5px 15px; border-radius: 20px; }
+        /* Hızlı İletişim Butonları (Sağ Sabit) */
+        .sticky-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+        
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-whatsapp { background: #25d366; }
+        .btn-call { background: #004a99; }
+        
+        .contact-btn:hover { transform: scale(1.1); }
+        .contact-btn img { width: 30px; filter: brightness(0) invert(1); }
+
+        /* Mobil Header Düzenlemesi */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; } /* Basitlik için mobil menü gizlendi veya burger eklenebilir */
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <span>Teknik Destek:</span>
-        <a href="tel:+905050913463" class="call-btn">📞 Hemen Ara: 0505 091 34 63</a>
+
+    <div style="background: #0f172a; color: white; padding: 10px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+        <span>Yusuf Endüstriyel Çözümler</span>
+        <a href="tel:+905050913463" style="color: #39FF14; text-decoration: none; font-weight: bold;">📞 Destek: 0505 091 34 63</a>
     </div>
 
     <header>
@@ -31,14 +64,53 @@ l<!DOCTYPE html>
         </div>
     </header>
 
-    <section class="hero" style="background-image: linear-gradient(rgba(15,23,42,0.5), rgba(15,23,42,0.5)), url('1000500012.jpg');">
-        <h1>RULMANIN <br>TEK ADRESİ</h1>
-        <p>Endüstri 4.0 uyumlu mühendislik çözümleri.</p>
-        <a href="https://wa.me/905050913463" style="background:var(--neon); color:var(--dark); padding:15px 30px; text-decoration:none; border-radius:30px; font-weight:bold; margin-top:20px;">WHATSAPP'TAN TEKLİF AL</a>
+    <section class="hero" style="background-image: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), url('1000500012.jpg');">
+        <h1>HASSASİYETİN <br> DİJİTAL YÜZÜ</h1>
+        <p>Endüstri 4.0 ve Mühendislik vizyonuyla mikron hassasiyetinde rulman çözümleri.</p>
+        <div style="display: flex; gap: 20px; margin-top: 30px;">
+            <a href="tr/urunler.html" style="background: #004a99; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold;">ÜRÜNLERİ İNCELE</a>
+            <a href="https://wa.me/905050913463" style="background: #39FF14; color: #0f172a; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold;">TEKLİF AL</a>
+        </div>
     </section>
 
-    <a href="https://wa.me/905050913463" class="wa-float" target="_blank" style="position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 9999; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:35px;">
-    </a>
+    <section class="grid">
+        <a href="tr/hakkimizda.html" class="card" style="text-decoration: none;">
+            <img src="1000500015.jpg" alt="Mühendislik">
+            <div class="card-overlay">
+                <h3>Sistem Entegrasyonu</h3>
+                <p>Mühendislik disipliniyle kusursuz uyum ve verimlilik.</p>
+            </div>
+        </a>
+
+        <a href="tr/urunler.html" class="card" style="text-decoration: none;">
+            <img src="1000500014.jpg" alt="Ürün Yelpazesi">
+            <div class="card-overlay">
+                <h3>Güç Aktarımı</h3>
+                <p>Dayanıklı dişli ve rulman gruplarıyla kesintisiz üretim.</p>
+            </div>
+        </a>
+
+        <a href="tr/blog.html" class="card" style="text-decoration: none;">
+            <img src="1000500011.jpg" alt="Teknik Analiz">
+            <div class="card-overlay">
+                <h3>Teknik Analiz</h3>
+                <p>Mikron düzeyinde kalite kontrol ve mühendislik desteği.</p>
+            </div>
+        </a>
+    </section>
+
+    <div class="sticky-contact">
+        <a href="tel:+905050913463" class="contact-btn btn-call" title="Bizi Arayın">
+            <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Ara">
+        </a>
+        <a href="https://wa.me/905050913463" class="contact-btn btn-whatsapp" target="_blank" title="WhatsApp Mesaj">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <footer style="background: #0f172a; color: white; padding: 50px 5%; text-align: center;">
+        <p style="opacity: 0.7;">&copy; 2026 Rulman Satış | Bir Endüstri Mühendisi Girişimidir.</p>
+    </footer>
+
 </body>
 </html>
