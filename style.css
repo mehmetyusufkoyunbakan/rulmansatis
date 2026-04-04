@@ -1,0 +1,35 @@
+/* style.css */
+:root {
+    --blue: #004a99;
+    --dark: #0f172a;
+    --neon: #39FF14;
+    --light: #f8fafc;
+    --gray: #64748b;
+}
+
+body { margin: 0; font-family: 'Poppins', sans-serif; color: var(--dark); background: #fff; line-height: 1.6; }
+
+/* NAVBAR */
+header { background: rgba(255,255,255,0.98); position: fixed; top: 0; width: 100%; z-index: 2000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--blue); text-decoration: none; letter-spacing: -1px; }
+.nav-menu { display: flex; list-style: none; gap: 25px; margin: 0; }
+.nav-menu a { text-decoration: none; color: var(--dark); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+.nav-menu a:hover { color: var(--blue); }
+
+/* HERO SİSTEMİ */
+.hero { 
+    height: 75vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+    color: white; text-align: center; background-position: center; background-size: cover; padding: 0 10%;
+}
+.hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 7vw, 4.5rem); margin: 0; text-shadow: 0 10px 30px rgba(0,0,0,0.5); line-height: 1.1; }
+.hero p { font-size: 1.2rem; margin: 20px 0; opacity: 0.9; max-width: 700px; }
+
+/* KART GRİD SİSTEMİ */
+.grid { padding: 80px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+.card { border-radius: 25px; overflow: hidden; position: relative; height: 400px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transition: 0.4s ease; }
+.card:hover { transform: translateY(-15px); }
+.card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.card:hover img { transform: scale(1.1); }
+.card-overlay { position: absolute; bottom: 0; padding: 30px; color: white; background: linear-gradient(transparent, rgba(15,23,42,0.95)); width: 100%; box-sizing: border-box; }
+.card-overlay h3 { margin:
