@@ -3,57 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rulman Satış | Stoktan Hızlı Tedarik & Orijinal Ürünler</title>
-    <meta name="description" content="Endüstriyel rulman ihtiyaçlarınızda stoktan teslim, uygun fiyat ve hızlı tedarik. Bilyalı, makaralı ve lineer rulman çeşitleri.">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <title>Rulman Satış | Hızlı Tedarik & Orijinal Rulman Çeşitleri</title>
+    <meta name="description" content="Orijinal bilyalı, makaralı ve lineer rulman çeşitlerinde Türkiye'nin hızlı tedarik merkezi. Stoktan aynı gün teslimat.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --blue: #004a99; --dark: #1a1a1a; --gray: #f4f4f4; }
-        body { margin: 0; font-family: 'Poppins', sans-serif; color: var(--dark); background: #fff; }
-        
-        /* Navigasyon */
-        nav { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+        :root { --blue: #004a99; --gold: #c5a021; --dark: #1a1a1a; --white: #ffffff; --bg-light: #f8f9fa; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; color: var(--dark); background: #fff; overflow-x: hidden; }
 
-        /* Hero Bölümü */
-        .hero { height: 75vh; background: linear-gradient(rgba(0,40,80,0.8), rgba(0,20,40,0.6)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px; }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); margin: 0; line-height: 1.1; }
-        .hero p { font-size: 1.2rem; margin: 25px 0; max-width: 800px; opacity: 0.9; }
-        .btn-main { background: var(--blue); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .btn-main:hover { background: #00356e; }
-
-        /* WhatsApp Butonu */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 18px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 2000; }
+        /* --- NAVİGASYON --- */
+        nav {
+            background: var(--white); display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 8%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--blue); text-decoration: none; font-weight: 900; }
         
-        footer { background: #111; color: #777; padding: 40px; text-align: center; font-size: 0.9rem; }
+        .nav-container { display: flex; align-items: center; gap: 25px; }
+        .nav-links { display: flex; gap: 15px; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+
+        .lang-switch { display: flex; gap: 5px; border-left: 2px solid #eee; padding-left: 15px; }
+        .lang-switch a { text-decoration: none; font-size: 0.7rem; font-weight: bold; color: #888; border: 1px solid #ddd; padding: 3px 7px; border-radius: 4px; }
+        .lang-switch a.active { background: var(--blue); color: white; border-color: var(--blue); }
+
+        /* --- HERO (Görsel 1000339837) --- */
+        .hero { 
+            height: 80vh; 
+            background: linear-gradient(rgba(0,40,80,0.6), rgba(0,20,40,0.5)), 
+                        url('https://raw.githubusercontent.com/mehmetyusufkoyunbakan/rulmansatis/main/1000339837.jpg') center/cover;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px;
+        }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); margin: 0; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; margin: 25px 0; max-width: 800px; font-weight: 300; }
+
+        /* --- ÜRÜN ÖZELLİKLERİ (Görsel 1000339831 & 1000339828) --- */
+        .features { padding: 80px 8%; background: var(--bg-light); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-10px); }
+        .feature-card img { width: 100%; height: 250px; object-fit: cover; }
+        .feature-text { padding: 30px; text-align: center; }
+        .feature-text h3 { color: var(--blue); margin-top: 0; }
+
+        /* --- WHATSAPP BUTONU --- */
+        .wa-float { 
+            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; 
+            padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; 
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); z-index: 2000; display: flex; align-items: center; gap: 10px;
+        }
+
+        /* --- MOBİL --- */
+        @media (max-width: 992px) {
+            nav { padding: 15px 5%; flex-direction: column; gap: 15px; }
+            .nav-container { flex-direction: column; width: 100%; }
+            .nav-links { justify-content: center; flex-wrap: wrap; }
+            .hero h1 { font-size: 2.2rem; }
+            .wa-float { width: 80%; right: 5%; left: 5%; text-align: center; justify-content: center; }
+        }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="/" class="logo">RULMAN SATIŞ</a>
-    <ul class="nav-links">
-        <li><a href="/">Anasayfa</a></li>
-        <li><a href="/tr/hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="/tr/urunler.html">Ürünler</a></li>
-        <li><a href="/tr/katalog.html">Katalog</a></li>
-        <li><a href="/tr/blog.html">Blog</a></li>
-        <li><a href="/tr/iletisim.html">İletişim</a></li>
-    </ul>
+    <a href="index.html" class="logo">RULMAN SATIŞ</a>
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="tr/hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="tr/urunler.html">Ürünler</a></li>
+            <li><a href="tr/katalog.html">Katalog</a></li>
+            <li><a href="tr/blog.html">Blog</a></li>
+            <li><a href="tr/iletisim.html">İletişim</a></li>
+        </ul>
+        <div class="lang-switch">
+            <a href="index.html" class="active">TR</a>
+            <a href="en/index.html">EN</a>
+            <a href="ar/index.html">AR</a>
+        </div>
+    </div>
 </nav>
 
 <section class="hero">
-    <h1>Hızlı Tedarik, Güçlü Stok <br> Profesyonel Rulman Çözümleri</h1>
-    <p>Sanayi üretiminizin aksamaması için ihtiyacınız olan tüm rulman çeşitlerini en kısa sürede adresinize ulaştırıyoruz.</p>
-    <a href="/tr/urunler.html" class="btn-main">ÜRÜNLERİ İNCELE</a>
+    <h1>HIZLI TEDARİK <br> KESİNTİSİZ ÜRETİM</h1>
+    <p>Sanayinin kalbinde, stok gücümüzle yanınızdayız. En geniş ürün yelpazesi ve aynı gün teslimat avantajı.</p>
+    <a href="https://wa.me/905050913463" style="background: var(--gold); color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1rem;">STOKLARI SORGULA</a>
 </section>
 
-<footer>
-    &copy; 2026 RulmanSatis.com | Hızlı Tedarik Hattı: +90 505 091 34 63
-</footer>
+<section class="features">
+    <div class="feature-card">
+        <img src="https://raw.githubusercontent.com/mehmetyusufkoyunbakan/rulmansatis/main/1000339831.jpg" alt="Ürün Çeşitliliği">
+        <div class="feature-text">
+            <h3>Geniş Ürün Gamı</h3>
+            <p>Binlerce çeşit rulman ve güç aktarım organı stoklarımızda sizi bekliyor.</p>
+        </div>
+    </div>
+    <div class="feature-card">
+        <img src="https://raw.githubusercontent.com/mehmetyusufkoyunbakan/rulmansatis/main/1000339828.jpg" alt="Kalite Kontrol">
+        <div class="feature-text">
+            <h3>%100 Orijinal</h3>
+            <p>Dünya lideri markaların en yeni ve dayanıklı serilerine doğrudan erişim sağlayın.</p>
+        </div>
+    </div>
+</section>
 
-<a href="https://wa.me/905050913463" class="wa-float">HIZLI TEDARİK İÇİN TIKLAYIN</a>
+<a href="https://wa.me/905050913463" class="wa-float" target="_blank">
+    💬 HIZLI TEDARİK İÇİN ULAŞIN
+</a>
+
+<footer style="background:#111; color:#555; padding:40px; text-align:center;">
+    &copy; 2026 RulmanSatis.com | Endüstriyel Çözüm Ortağınız
+</footer>
 
 </body>
 </html>
