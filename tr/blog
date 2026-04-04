@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknik Blog | Rulman Satış</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --blue: #004a99;
+            --dark: #0f172a;
+            --neon: #39FF14;
+            --bg: #f8fafc;
+        }
+        
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--dark); }
+
+        /* NAVBAR (Anasayfa ile Aynı) */
+        header {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 20px; margin: 0; padding: 0; }
+        .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* BLOG HEADER */
+        .blog-header {
+            background: var(--dark);
+            color: white;
+            padding: 80px 5% 50px;
+            text-align: center;
+        }
+        .blog-header h1 { font-family: 'Montserrat'; font-size: 2.5rem; margin: 0; }
+        .blog-header p { opacity: 0.8; margin-top: 10px; }
+
+        /* BLOG GRID */
+        .blog-container {
+            max-width: 1200px;
+            margin: 50px auto 100px;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* YAZI KARTI (KEMİK YAPI) */
+        .post-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+        .post-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .post-img { width: 100%; height: 230px; object-fit: cover; }
+        .post-info { padding: 25px; flex-grow: 1; }
+        .post-date { color: var(--blue); font-weight: 700; font-size: 0.8rem; display: block; margin-bottom: 10px; }
+        .post-info h2 { font-family: 'Montserrat'; font-size: 1.3rem; margin: 0 0 15px 0; line-height: 1.3; }
+        .post-info p { font-size: 0.9rem; color: #64748b; line-height: 1.6; }
+        
+        .read-more { 
+            margin-top: auto; padding: 20px 25px; 
+            border-top: 1px solid #eee; font-weight: 700; 
+            font-size: 0.8rem; color: var(--blue); text-transform: uppercase;
+        }
+
+        /* WHATSAPP BUTONU */
+        .wa-sticky {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25d366; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 2000;
+        }
+
+        @media (max-width: 768px) { .nav-menu { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo">RULMAN SATIŞ</a>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="urunler.html">Ürünler</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="blog-header">
+        <h1>Mühendislik Günlüğü</h1>
+        <p>Rulman teknolojileri ve endüstriyel bakım stratejileri üzerine teknik yazılar.</p>
+    </div>
+
+    <main class="blog-container">
+
+        <a href="blog/rulman-bakimi.html" class="post-card">
+            <img src="../1000500016.jpg" class="post-img" alt="Rulman Bakımı">
+            <div class="post-info">
+                <span class="post-date">04 NİSAN 2026</span>
+                <h2>Rulman Bakımında Mikron Hassasiyeti</h2>
+                <p>Toz ve kontaminasyonun rulman ömrü üzerindeki yıkıcı etkileri ve korunma yolları.</p>
+            </div>
+            <div class="read-more">Devamını Oku →</div>
+        </a>
+
+        <div class="post-card" style="opacity: 0.7; cursor: default;">
+            <img src="../1000500011.jpg" class="post-img" alt="Gelecek Yazı">
+            <div class="post-info">
+                <span class="post-date">YAKINDA</span>
+                <h2>Endüstri 4.0 ve Akıllı Rulmanlar</h2>
+                <p>Sensör teknolojilerinin kestirimci bakım süreçlerine entegrasyonu hakkında bir inceleme.</p>
+            </div>
+            <div class="read-more">Çok Yakında</div>
+        </div>
+
+    </main>
+
+    <a href="https://wa.me/905050913463" class="wa-sticky" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" style="filter: brightness(0) invert(1);">
+    </a>
+
+</body>
+</html>
