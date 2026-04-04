@@ -1,1 +1,37 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalog | Rulman Satış</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #004a99; --dark: #0f172a; --neon: #39FF14; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; text-align: center; }
+        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; }
+        .logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.6rem; color: var(--blue); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 20px; }
+        .nav-menu a { text-decoration: none; color: var(--dark); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+        .hero-catalog { padding: 100px 5%; background: var(--dark); color: white; }
+        .download-btn { background: var(--neon); color: var(--dark); padding: 20px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block; margin-top: 30px; transition: 0.3s; }
+        .download-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--neon); }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">RULMAN SATIŞ</a>
+        <nav><ul class="nav-menu">
+            <li><a href="../index.html">Anasayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="urunler.html">Ürünler</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+        </ul></nav>
+    </header>
+    <section class="hero-catalog">
+        <h1 style="font-family:'Montserrat'; font-size: 3rem;">2026 Teknik Katalog</h1>
+        <p>Tüm ürün gruplarımızı ve teknik ölçü tablolarımızı PDF olarak indirin.</p>
+        <a href="../katalog.pdf" class="download-btn" download>📥 KATALOĞU İNDİR (PDF)</a>
+    </section>
+</body>
+</html>
