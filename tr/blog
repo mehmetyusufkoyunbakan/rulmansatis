@@ -2,11 +2,30 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Blog | Rulman Satış</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sektörel Blog | Rulman Satış</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-hero { padding: 150px 5% 50px; text-align: center; background: #fcfcfc; }
+        .blog-container { max-width: 1200px; margin: 0 auto; padding: 40px 5% 100px; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
+        
+        /* Haber Kartı Modülü */
+        .post-card {
+            background: #fff; border-radius: 15px; overflow: hidden; border: 1px solid #eee;
+            text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: 0.3s;
+        }
+        .post-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--neon); }
+        .post-thumb { width: 100%; height: 220px; object-fit: cover; }
+        .post-content { padding: 25px; flex-grow: 1; }
+        .post-date { color: var(--blue); font-size: 0.8rem; font-weight: 700; margin-bottom: 10px; display: block; }
+        .post-content h2 { font-family: 'Montserrat'; font-size: 1.3rem; margin: 0 0 12px 0; line-height: 1.4; }
+        .post-content p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+        .read-btn { color: var(--dark); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; border-bottom: 2px solid var(--neon); }
+    </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
             <a href="../index.html" class="logo">RULMAN SATIŞ</a>
@@ -20,19 +39,37 @@
         </div>
     </header>
 
-    <div class="blog-header" style="padding-top:150px; text-align:center;">
-        <h1>Teknik Makaleler</h1>
+    <div class="blog-hero">
+        <h1 style="font-family:'Montserrat';">Teknik Blog & Haberler</h1>
+        <p>Mühendislik analizleri ve sektörel güncellemeler.</p>
     </div>
 
-    <main class="blog-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px; padding:50px;">
-        <a href="blog/rulman-bakimi.html" class="card" style="text-decoration:none;">
-            <img src="../1000500016.jpg" style="width:100%; height:200px; object-fit:cover;">
-            <div style="padding:15px;">
-                <h2 style="font-size:1.2rem; color:var(--dark);">Zorlu Koşullarda Rulman Bakımı</h2>
-                <p style="font-size:0.9rem; color:#666;">Mikron düzeyinde analiz ve koruma yöntemleri...</p>
-                <span style="color:var(--blue); font-weight:bold;">Devamını Oku →</span>
+    <main class="blog-container">
+
+        <a href="blog/yazi-linki-buraya.html" class="post-card">
+            <img src="../1000500016.jpg" class="post-thumb">
+            <div class="post-content">
+                <span class="post-date">04 NİSAN 2026</span>
+                <h2>Yazı Başlığı Buraya Gelecek</h2>
+                <p>Yazının kısa bir özeti veya giriş cümlesi buraya yazılacak. Okuyucunun ilgisini çekecek teknik bir detay...</p>
+                <span class="read-btn">Yazıyı Oku →</span>
             </div>
         </a>
+        <a href="blog/endustri-4-0.html" class="post-card">
+            <img src="../1000500012.jpg" class="post-thumb">
+            <div class="post-content">
+                <span class="post-date">02 NİSAN 2026</span>
+                <h2>Endüstri 4.0 ve Rulmanlar</h2>
+                <p>Akıllı sistemlerin ve sensör teknolojilerinin rulman dünyasındaki etkileri.</p>
+                <span class="read-btn">Yazıyı Oku →</span>
+            </div>
+        </a>
+
     </main>
+
+    <a href="https://wa.me/905050913463" class="wa-float" target="_blank" style="position:fixed; bottom:30px; right:30px; background:#25d366; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 20px rgba(0,0,0,0.2); z-index:9999;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:30px;">
+    </a>
+
 </body>
 </html>
